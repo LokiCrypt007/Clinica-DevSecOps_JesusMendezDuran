@@ -8,9 +8,8 @@ const db = mysql.createConnection({
 });
 
 app.get('/pacientes/:id', (req, res) => {
-  app.get('/pacientes/:id', (req, res) => {
-    const consulta = "SELECT * FROM pacientes WHERE id = " + req.params.id;
-   db.query(consulta, (err, filas) => res.json(filas));
+  const consulta = "SELECT * FROM pacientes WHERE id = " + req.params.id;
+  db.query(consulta, (err, filas) => res.json(filas));
 });
 
 app.listen(3000);
